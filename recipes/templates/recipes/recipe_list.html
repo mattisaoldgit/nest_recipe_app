@@ -1,0 +1,20 @@
+<!-- recipes/templates/recipes/recipe_list.html -->
+
+{% extends 'recipes/base.html' %}
+
+{% block content %}
+    <h2>Recipes</h2>
+    <ul>
+        {% for recipe in recipes %}
+            <li>sadf
+                <a href="{% url 'view_recipe' recipe.id %}">{{ recipe.title }}</a>
+            </li>
+        {% empty %}
+            <li>No recipes found.</li>
+        {% endfor %}
+    </ul>
+
+    asdf
+
+    <a href="{% url 'create_recipe' %}">Add New Recipe</a>
+{% endblock %}

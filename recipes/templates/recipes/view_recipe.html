@@ -1,0 +1,17 @@
+<!-- recipes/templates/recipes/view_recipe.html -->
+
+{% extends 'recipes/base.html' %}
+
+{% block content %}
+    <h2>{{ recipe.title }}</h2>
+    <p><strong>Ingredients:</strong></p>
+    <p>{{ recipe.ingredients }}</p>
+    <p><strong>Instructions:</strong></p>
+    <p>{{ recipe.instructions }}</p>
+    <ul>
+        {% for food_item in recipe.food_items.all %}
+            <li>asdf {{ food_item.name }} - Quantity: {{ food_item.quantity }} {{ food_item.unit }} ({{ food_item.type }})</li>
+        {% endfor %}
+    </ul>
+    {{ food_item.name }}
+{% endblock %}

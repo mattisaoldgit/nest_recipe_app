@@ -1,0 +1,15 @@
+<!-- recipes/templates/recipes/base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Sharing Platform</title>
+</head>
+<body>
+    <div>
+        <h1><a href="{% url 'recipe_list' %}">Recipe Sharing Platform</a></h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

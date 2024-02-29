@@ -1,0 +1,11 @@
+<h2>Food Items List</h2>
+<a href="{% url 'add_food_item' %}">Add New Item</a>
+<ul>
+    {% for item in items %}
+    <li>
+        {{ item.name }} - {{ item.quantity }} {{ item.unit }} ({{ item.type }})
+        <a href="{% url 'edit_food_item' item.pk %}">Edit</a>
+        <a href="{% url 'delete_food_item' item.pk %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>

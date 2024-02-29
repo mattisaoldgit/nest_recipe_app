@@ -1,4 +1,4 @@
-# nest_recipe
+# nest_recipe_app
 Nest's Recipe Code
 
 This is the proof of concept code at the start.
